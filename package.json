@@ -13,9 +13,12 @@
     "url": "git+https://github.com/leerob/leerob.io.git"
   },
   "scripts": {
+    "dev": "next dev",
     "build": "next build",
-    "dev": "next",
-    "start": "next start"
+    "start": "next start -H 0.0.0.0 -p $PORT",
+    "start:dev": "next start",
+    "start:prod": "next start -p 80",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "0.6.0",
